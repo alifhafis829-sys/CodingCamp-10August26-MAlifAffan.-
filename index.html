@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +8,23 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <!-- Header Card -->
+        <section class="card header-card">
             <button id="theme-toggle">🌙 Mode</button>
-            <h1 id="clock">00:00:00</h1>
-            <p id="date">Date</p>
-            <h2 id="greeting">Good Morning, <span id="user-name" contenteditable="true">User</span></h2>
-        </header>
+            <h1 id="clock">00.00.00</h1>
+            <p id="date">Hari, 00 Bulan 0000</p>
+            <h2 id="greeting">Good Morning, <span id="user-name">M. ALIF AFFAN AZZAMI HAFIS</span></h2>
+            
+            <div class="name-input-group">
+                <input type="text" id="name-input" placeholder="Set your name...">
+                <button id="save-name-btn">Save Name</button>
+            </div>
+        </section>
 
+        <!-- Focus Timer Card -->
         <section class="card">
             <h3>Focus Timer</h3>
             <div id="timer">25:00</div>
-            <div class="controls">
-                <button onclick="setTimer(25)">25m</button>
-                <button onclick="setTimer(15)">15m</button>
-                <button onclick="setTimer(5)">5m</button>
-            </div>
             <div class="timer-btns">
                 <button id="start">Start</button>
                 <button id="stop">Stop</button>
@@ -30,18 +32,24 @@
             </div>
         </section>
 
+        <!-- Tasks Card -->
         <section class="card">
             <h3>Tasks</h3>
-            <input type="text" id="todo-input" placeholder="Add task...">
-            <button onclick="addTask()">Add</button>
+            <div class="input-group">
+                <input type="text" id="todo-input" placeholder="Add a new task...">
+                <button onclick="addTask()">Add</button>
+            </div>
             <ul id="todo-list"></ul>
         </section>
 
+        <!-- Quick Links Card -->
         <section class="card">
             <h3>Quick Links</h3>
-            <input type="text" id="link-name" placeholder="Name">
-            <input type="url" id="link-url" placeholder="URL">
-            <button onclick="addLink()">Add Link</button>
+            <div class="input-group">
+                <input type="text" id="link-name" placeholder="Name">
+                <input type="url" id="link-url" placeholder="URL">
+                <button onclick="addLink()">Add Link</button>
+            </div>
             <div id="links-container"></div>
         </section>
     </div>
