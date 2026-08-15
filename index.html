@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button id="theme-toggle">🌙 Mode</button>
+            <h1 id="clock">00:00:00</h1>
+            <p id="date">Date</p>
+            <h2 id="greeting">Good Morning, <span id="user-name" contenteditable="true">User</span></h2>
+        </header>
+
+        <section class="card">
+            <h3>Focus Timer</h3>
+            <div id="timer">25:00</div>
+            <div class="controls">
+                <button onclick="setTimer(25)">25m</button>
+                <button onclick="setTimer(15)">15m</button>
+                <button onclick="setTimer(5)">5m</button>
+            </div>
+            <div class="timer-btns">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+                <button id="reset">Reset</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>Tasks</h3>
+            <input type="text" id="todo-input" placeholder="Add task...">
+            <button onclick="addTask()">Add</button>
+            <ul id="todo-list"></ul>
+        </section>
+
+        <section class="card">
+            <h3>Quick Links</h3>
+            <input type="text" id="link-name" placeholder="Name">
+            <input type="url" id="link-url" placeholder="URL">
+            <button onclick="addLink()">Add Link</button>
+            <div id="links-container"></div>
+        </section>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
